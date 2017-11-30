@@ -25,8 +25,12 @@ install_ssr(){
 	sed -i -e "s/ssprotocol/$ssprotocol/g" user-config.json
 	sed -i -e "s/ssobfs/$ssobfs/g" user-config.json
 	echo 'ssr配置完成'
-	./run.sh
+	chmod +x run.sh && ./run.sh
 	cd
+	echo 'ssr已开始运行'
+	service iptables stop
+	service firewalld stop
+	echo '暂时关闭iptables、firewalld，如有需求请自行配置。'
 }
 open_bbr(){
 	cd
