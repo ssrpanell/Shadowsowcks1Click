@@ -4,7 +4,7 @@
 install_ssr(){
 	cd /root/
 	echo '下载ssr'
-	git clone https://github.com/maxzh0916/1ClickDeploy.git && cd 1ClickDeploy && ./setup_cymysql.sh && ./initcfg.sh
+	git clone git://github.com/maxzh0916/1ClickDeploy.git && cd 1ClickDeploy && ./setup_cymysql.sh && ./initcfg.sh
 	echo 'ssr安装完成'
 	stty erase '^H' && read -p " mysql服务器地址:" ssserver
 	stty erase '^H' && read -p " mysql服务器端口:" ssport
@@ -36,8 +36,6 @@ open_bbr(){
 
 }
 
-yum -y install git
-yum -y install wget
 echo ' 1. 安装SSR 2. 安装BBR'
 stty erase '^H' && read -p " 请输入数字 [1-2]:" num
 case "$num" in
