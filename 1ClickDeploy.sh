@@ -3,6 +3,7 @@
 
 install_ssr(){
 	cd /root/
+	yum -y install git
 	echo '下载ssr'
 	git clone -b master https://github.com/maxzh0916/1ClickDeploy.git && cd 1ClickDeploy && chmod +x setup_cymysql.sh && chmod +x ./initcfg.sh && ./setup_cymysql.sh && ./initcfg.sh
 	echo 'ssr安装完成'
