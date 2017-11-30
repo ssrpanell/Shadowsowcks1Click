@@ -1,0 +1,13 @@
+{
+    "host": "ssserver",
+    "port": ssport,
+    "user": "ssuser",
+    "password": "sspass",
+    "db": "ssdb",
+    "node_id": ssnode,
+    "transfer_mul": 1.0,
+    "ssl_enable": 0,
+    "ssl_ca": "",
+    "ssl_cert": "",
+    "ssl_key": ""
+}
