@@ -52,6 +52,6 @@ case "$num" in
 	open_bbr
 	;;
 	*)
-	echo "请输入正确数字 [1-2]"
+	echo '请输入正确数字 [1-2]'
 	;;
 esac
