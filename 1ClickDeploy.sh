@@ -4,7 +4,7 @@
 install_ssr(){
 	cd /root/
 	echo '下载ssr'
-	git clone  && cd shadowsocksr && ./setup_cymysql.sh && ./initcfg.sh
+	git clone https://github.com/maxzh0916/1ClickDeploy.git && cd 1ClickDeploy && ./setup_cymysql.sh && ./initcfg.sh
 	echo 'ssr安装完成'
 	stty erase '^H' && read -p " mysql服务器地址:" ssserver
 	stty erase '^H' && read -p " mysql服务器端口:" ssport
@@ -24,7 +24,7 @@ install_ssr(){
 	sed -i -e "s/ssmethod/$ssmethod/g" user-config.json
 	sed -i -e "s/ssprotocol/$ssprotocol/g" user-config.json
 	sed -i -e "s/ssobfs/$ssobfs/g" user-config.json
-	echo 'setting up the ssr as service in systemd'
+	echo 'ssr配置完成'
 	./run.sh
 	cd
 }
