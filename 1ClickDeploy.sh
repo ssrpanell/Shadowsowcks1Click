@@ -6,6 +6,7 @@ install_ssr(){
 	echo '下载ssr'
 	git clone git://github.com/maxzh0916/1ClickDeploy.git && cd 1ClickDeploy && chmod +x setup_cymysql.sh && chmod +x ./initcfg.sh && ./setup_cymysql.sh && ./initcfg.sh
 	echo 'ssr安装完成'
+	stty erase '^H' && read -p " API接口（mudbjson, sspanelv2, sspanelv3, sspanelv3ssr, glzjinmod, legendsockssr）:ssapi
 	stty erase '^H' && read -p " mysql服务器地址:" ssserver
 	stty erase '^H' && read -p " mysql服务器端口:" ssport
 	stty erase '^H' && read -p " mysql服务器用户名:" ssuser
@@ -15,6 +16,7 @@ install_ssr(){
 	stty erase '^H' && read -p " 加密:" ssmethod
 	stty erase '^H' && read -p " 协议:" ssprotocol
 	stty erase '^H' && read -p " 混淆:" ssobfs
+	sed -i -e "s/ssapi/$ssapi/g" userapiconfig.py
 	sed -i -e "s/ssserver/$ssserver/g" usermysql.json
 	sed -i -e "s/ssport/$ssport/g" usermysql.json
 	sed -i -e "s/ssuser/$ssuser/g" usermysql.json
