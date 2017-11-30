@@ -34,6 +34,7 @@ install_ssr(){
 	service firewalld stop
 	echo '暂时关闭iptables、firewalld，如有需求请自行配置。'
 }
+
 open_bbr(){
 	cd
 	wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
@@ -42,7 +43,8 @@ open_bbr(){
 
 }
 
-echo ' 1. 安装SSR 2. 安装BBR'
+echo ' 1. 安装SSR'
+echo ' 2. 安装BBR'
 stty erase '^H' && read -p " 请输入数字 [1-2]:" num
 case "$num" in
 	1)
