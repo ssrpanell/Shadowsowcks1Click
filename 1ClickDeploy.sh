@@ -5,6 +5,7 @@ install_ssr(){
 	cd /root/
 	echo '下载ssr'
 	git clone -b master https://github.com/maxzh0916/1ClickDeploy.git && mv 1ClickDeploy shadowsocksr && cd shadowsocksr && chmod +x setup_cymysql.sh && chmod +x ./initcfg.sh && ./setup_cymysql.sh && ./initcfg.sh
+	rm -rf 1ClickDeploy.sh
 	echo 'ssr安装完成'
 	stty erase '^H' && read -p " API接口（mudbjson, sspanelv2, sspanelv3, sspanelv3ssr, glzjinmod, legendsockssr）:" ssapi
 	stty erase '^H' && read -p " mysql服务器地址:" ssserver
