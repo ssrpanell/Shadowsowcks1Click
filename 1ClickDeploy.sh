@@ -47,7 +47,21 @@ open_bbr(){
 if [ `rpm -qa | git |wc -l` -ne 0 ];then
 	echo "已安装git" 
 else
+	if [ -f /etc/redhat-release ]; then
 	yum -y install git
+	elif cat /etc/issue | grep -Eqi "debian"; then
+	apt-get -y install git
+	elif cat /etc/issue | grep -Eqi "ubuntu"; then
+	apt-get -y install git
+	elif cat /etc/issue | grep -Eqi "centos|red hat|redhat"; then
+	yum -y install git
+	elif cat /proc/version | grep -Eqi "debian"; then
+	apt-get -y install git
+	elif cat /proc/version | grep -Eqi "ubuntu"; then
+	apt-get -y install git
+	elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
+	yum -y install git
+	fi
 fi
 echo ' 1. 安装SSR'
 echo ' 2. 安装BBR'
