@@ -14,9 +14,9 @@ install_ssr(){
 	stty erase '^H' && read -p " mysql服务器密码:" sspass
 	stty erase '^H' && read -p " mysql服务器数据库名:" ssdb
 	stty erase '^H' && read -p " SSR节点ID（nodeid）:" ssnode
-	stty erase '^H' && read -p " 加密:" ssmethod
-	stty erase '^H' && read -p " 协议:" ssprotocol
-	stty erase '^H' && read -p " 混淆:" ssobfs
+	stty erase '^H' && read -p " 加密（method）:" ssmethod
+	stty erase '^H' && read -p " 协议（protocol）:" ssprotocol
+	stty erase '^H' && read -p " 混淆（obfs）:" ssobfs
 	sed -i -e "s/ssapi/$ssapi/g" userapiconfig.py
 	sed -i -e "s/ssserver/$ssserver/g" usermysql.json
 	sed -i -e "s/ssport/$ssport/g" usermysql.json
