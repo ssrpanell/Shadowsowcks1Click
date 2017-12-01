@@ -3,11 +3,6 @@
 
 install_ssr(){
 	cd /root/
-	if [ `rpm -qa | git |wc -l` -ne 0 ];then
-	echo "已安装git" 
-	else
-	yum -y install git
-	fi
 	echo '下载ssr'
 	git clone -b master https://github.com/maxzh0916/1ClickDeploy.git && mv 1ClickDeploy shadowsocksr && cd shadowsocksr && chmod +x setup_cymysql.sh && chmod +x ./initcfg.sh && ./setup_cymysql.sh && ./initcfg.sh
 	echo 'ssr安装完成'
@@ -48,6 +43,11 @@ open_bbr(){
 
 }
 
+if [ `rpm -qa | git |wc -l` -ne 0 ];then
+	echo "已安装git" 
+else
+	yum -y install git
+fi
 echo ' 1. 安装SSR'
 echo ' 2. 安装BBR'
 stty erase '^H' && read -p " 请输入数字 [1-2]:" num
