@@ -1,6 +1,6 @@
 #Require Root Permission
 [ $(id -u) != "0" ] && { echo "Error: You must be root to run this script"; exit 1; }
-
+install_ssr(){
 	cd /root/
   wget https://github.com/jedisct1/libsodium/releases/download/1.0.15/libsodium-1.0.15.tar.gz
   tar xf libsodium-1.0.15.tar.gz && cd libsodium-1.0.15
