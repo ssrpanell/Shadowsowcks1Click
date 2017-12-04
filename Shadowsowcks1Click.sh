@@ -2,14 +2,14 @@
 [ $(id -u) != "0" ] && { echo "Error: You must be root to run this script"; exit 1; }
 install_ssr(){
 	cd /root/
-  wget https://github.com/jedisct1/libsodium/releases/download/1.0.15/libsodium-1.0.15.tar.gz
-  tar xf libsodium-1.0.15.tar.gz && cd libsodium-1.0.15
-  ./configure && make -j2 && make install
-  echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
-  cd /root/
-  rm -rf libsodium-1.0.15.tar.gz
+  	wget https://github.com/jedisct1/libsodium/releases/download/1.0.15/libsodium-1.0.15.tar.gz
+  	tar xf libsodium-1.0.15.tar.gz && cd libsodium-1.0.15
+  	./configure && make -j2 && make install
+  	echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf
+  	cd /root/
+  	rm -rf libsodium-1.0.15.tar.gz
 	echo 'libsodium安装完成'
-  git clone -b master https://github.com/maxzh0916/Shadowsowcks1Click.git && mv Shadowsowcks1Click shadowsocksr && cd shadowsocksr && chmod +x setup_cymysql.sh && chmod +x ./initcfg.sh && ./setup_cymysql.sh && ./initcfg.sh
+  	git clone -b master https://github.com/maxzh0916/Shadowsowcks1Click.git && mv Shadowsowcks1Click shadowsocksr && cd shadowsocksr && chmod +x setup_cymysql.sh && chmod +x ./initcfg.sh && ./setup_cymysql.sh && ./initcfg.sh
 	rm -rf Shadowsowcks1Click.sh
 	echo 'ssr安装完成'
 	stty erase '^H' && read -p " API接口（mudbjson, sspanelv2, sspanelv3, sspanelv3ssr, glzjinmod, legendsockssr）:" ssapi
