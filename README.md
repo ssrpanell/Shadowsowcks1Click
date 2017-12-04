@@ -9,7 +9,7 @@
 <br>注意！脚本不会安装编译工具及libsodium，请安装。
 ## 使用方法
 ````
-wget -N --no-check-certificate https://raw.githubusercontent.com/maxzh0916/1ClickDeploy/master/1ClickDeploy.sh;chmod +x 1ClickDeploy.sh;./1ClickDeploy.sh
+wget -N --no-check-certificate https://raw.githubusercontent.com/maxzh0916/Shadowsowcks1Click/master/Shadowsowcks1Click.sh;chmod +x Shadowsowcks1Click.sh;./Shadowsowcks1Click.sh
 ````
 <br>复制上方代码并执行开始安装。
 ## 脚本功能
