@@ -6,7 +6,6 @@
 <br>https://github.com/teddysun/
 ## 说明
 添加更多自定义设置，省去配置步骤，修改设置一键安装完毕。
-<br>注意！脚本不会安装编译工具及libsodium，请安装。
 ## 使用方法
 ````
 wget -N --no-check-certificate https://raw.githubusercontent.com/maxzh0916/Shadowsowcks1Click/master/Shadowsowcks1Click.sh;chmod +x Shadowsowcks1Click.sh;./Shadowsowcks1Click.sh
@@ -14,8 +13,11 @@ wget -N --no-check-certificate https://raw.githubusercontent.com/maxzh0916/Shado
 <br>复制上方代码并执行开始安装。
 ## 脚本功能
 ````
-1.检查是否安装了git（可能会有点慢）。
-2.选择安装功能，1为SSR，2为BBR。
+1.检查是否安装了git、libsodium（可能会有点慢）。
+2.选择安装功能，
+  1）SSR
+  2）BBR
+  3）定时重启节点
 3.BBR安装以后需要重启。
 4.SSR下载并安装以后会按提示输入配置即可。
 API接口：mudbjson, sspanelv2, sspanelv3, sspanelv3ssr, glzjinmod, legendsockssr，根据面板要求输入。
