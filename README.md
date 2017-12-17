@@ -1,4 +1,4 @@
-# 1ClickDeploy
+# Shadowsowcks1Click
 ## 特别感谢
 修改自Hao-Luo大佬的SSR脚本！
 <br>https://github.com/Hao-Luo/
@@ -6,6 +6,7 @@
 <br>https://github.com/teddysun/
 ## 说明
 添加更多自定义设置，省去配置步骤，修改设置一键安装完毕。
+<br>脚本在centos7上测试通过，其他发行版未测试。
 ## 使用方法
 ````
 wget -N --no-check-certificate https://raw.githubusercontent.com/maxzh0916/Shadowsowcks1Click/master/Shadowsowcks1Click.sh;chmod +x Shadowsowcks1Click.sh;./Shadowsowcks1Click.sh
